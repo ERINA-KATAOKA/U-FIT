@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.accordion__item:not(:first-child) {
+  margin-top: rem(24);
+
+  @include mq("md") {
+		margin-top: rem(32);
+  }
+}
+
+.accordion__title {
+  position: relative;
+  padding: rem(12) rem(68) rem(12) rem(34);
+  font-size: rem(14);
+  font-weight: $bold;
+  letter-spacing: 0.08em;
+  background-color: $light-gray;
+  transition: opacity .3s;
+  cursor: pointer;
+
+  @include mq("md") {
+		padding: rem(14) rem(41);
+    font-size: rem(18);
+  }
+}
+
+@media(hover: hover) {
+	.accordion__title:hover {
+    opacity: .7;
+  }
+}
+
+.accordion__title::before {
+  content: "Q";
+  position: absolute;
+  top: 50%;
+  left: rem(12);
+  transform: translateY(-50%);
+  font-size: rem(20);
+
+  @include mq("md") {
+		left: rem(16);
+    font-size: rem(24);
+  }
+}
+
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: rem(12);
+  transform: translateY(-50%);
+  width: rem(16);
+  height: rem(9.5);
+  background-image: url(../images/common/accordion-arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .3s;
+
+  @include mq("md") {
+		right: rem(16);
+  }
+}
+
+.accordion__title.is-open::after {
+  top: 42%;
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  display: none;
+  margin-top: rem(16);
+
+  @include mq("md") {
+		margin-top: rem(23);
+  }
+}
+
+.accordion__content p {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.08em;
+  text-align: justify;
+}

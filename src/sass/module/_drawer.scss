@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.drawer {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-blue;
+  z-index: 5000;
+  transition: all .6s;
+}
+
+.drawer.is-active {
+  visibility: visible;
+  right: 0;
+}
+
+.drawer__inner {
+  position: relative;
+  width: 76.5333%;
+  height: inherit;
+  margin-left: auto;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(64);
+}
+
+.drawer__button {
+  position: absolute;
+  top: rem(37);
+  right: rem(42);
+  width: rem(37);
+  height: rem(37);
+  background-image: url(../images/common/drawer-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0 rem(3) rem(6) rgba($color: #000000, $alpha: 0.16));
+  cursor: pointer;
+}
+
+.drawer__items,
+.drawer__item {
+  width: 100%;
+  text-align: center;
+}
+
+.drawer__link {
+  display: inline-block;
+  width: 100%;
+  padding: rem(20);
+  font-size: rem(16);
+  font-family: $noto-font;
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.drawer__nav-button a {
+  display: inline-block;
+  padding: rem(21) rem(19);
+  font-size: rem(12);
+  font-weight: $medium;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: $white;
+  background-color: $black;
+  border-radius: rem(24);
+  box-shadow: rem(0) rem(4) rem(4) rgba($color: #0000, $alpha: 0.25);
+}

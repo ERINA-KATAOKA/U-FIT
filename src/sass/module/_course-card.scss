@@ -1,0 +1,179 @@
+@use "global" as *;
+
+.course-card {
+  padding: rem(24);
+  background-color: $light-gray;
+  border-radius: rem(30);
+
+  @include mq("md") {
+		padding: rem(40) rem(64) rem(64) rem(40);
+  }
+}
+
+.course-card__plan {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+}
+
+.course-card__number {
+  width: rem(56);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  background-color: $bg-blue;
+  border-radius: rem(20);
+
+  @include mq("md") {
+		width: rem(88);
+    font-size: rem(40);
+  }
+}
+
+.course-card__course {
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+		font-size: rem(32);
+  }
+}
+
+.course-card__wrap {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  
+  @include mq("lg") {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: rem(40);
+  }
+}
+
+.course-card__label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: rem(24);
+  gap: rem(11);
+
+  @include mq("lg") {
+		margin-top: 0;
+    gap: rem(38);
+  }
+}
+
+.course-card__label-item {
+  padding: rem(14) rem(23);
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  background-color: $bg-blue;
+  border-radius: rem(20);
+  
+  @include mq("md") {
+    width: rem(152);
+    text-align: center;
+    padding: rem(21) 0;
+    font-size: rem(20);
+  }
+}
+
+.course-card__price {
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+		font-size: rem(48);
+  }
+}
+
+.course-card__price span {
+  display: inline-block;
+  margin: 0 rem(16);
+  font-size: rem(36);
+  line-height: 1;
+
+  @include mq("md") {
+    margin-left: rem(32);
+		font-size: rem(96);
+  }
+}
+
+.course-card__content {
+  margin-top: rem(32);
+
+  @include mq("md") {
+		margin-top: rem(80);
+  }
+}
+
+.course-card__item:not(:first-child) {
+  margin-top: rem(16);
+
+  @include mq("md") {
+		margin-top: rem(48);
+  }
+}
+
+.course-card__title {
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+		font-size: rem(24);
+  }
+}
+
+.course-card__list {
+  margin-top: rem(16);
+
+  @include mq("md") {
+		margin-top: rem(24);
+  }
+}
+
+.course-card__list-item {
+  position: relative;
+  padding-left: rem(24);
+  font-size: rem(14);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+    padding-left: rem(40);
+		font-size: rem(16);
+  }
+}
+
+.course-card__list-item:not(:first-child) {
+  margin-top: rem(8);
+}
+
+.course-card__list-item::before {
+  content: "";
+  position: absolute;
+  top: rem(2.5);
+  left: 0;
+  display: inline-block;
+  width: rem(16);
+  height: rem(16);
+  background-color: $bg-blue;
+  border-radius: 50%;
+
+  @include mq("md") {
+		top: rem(4);
+  }
+}

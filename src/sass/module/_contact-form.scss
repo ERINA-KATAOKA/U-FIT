@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.contact-form__inner.inner {
+  max-width: rem(600);
+
+  @include mq("md") {
+    max-width: rem(1060);
+  }
+}
+
+.contact-form__content {
+  width: 100%;
+  padding: rem(48) rem(23) rem(64) rem(23);
+  background-color: $light-gray;
+  border-radius: rem(30);
+
+  @include mq("md") {
+		padding: rem(96) rem(210);
+  }
+}
+
+.contact-form__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form__title h2 {
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+		font-size: rem(40);
+  }
+}
+
+.contact-form__title::before,
+.contact-form__title::after {
+  content: "";
+  width: rem(12);
+  aspect-ratio: 1;
+  background-color: $bg-blue;
+  border-radius: 50%;
+
+  @include mq("md") {
+		width: rem(24);
+  }
+}
+
+.contact-form__title::before {
+  margin-right: rem(32);
+
+  @include mq("md") {
+		margin-right: rem(56);
+  }
+}
+
+.contact-form__title::after {
+  margin-left: rem(32);
+
+  @include mq("md") {
+		margin-left: rem(56);
+  }
+}
+
+.contact-form__form {
+  margin-top: rem(55);
+
+  @include mq("md") {
+		margin-top: rem(91);
+  }
+}

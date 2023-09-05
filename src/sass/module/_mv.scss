@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.mv {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - rem(72));
+  
+  @include mq("md") {
+    height: calc(100vh - rem(100));
+  }
+}
+
+.mv__inner,
+.mv__img {
+  width: 100%;
+  height: inherit;
+}
+
+.mv__img img{
+  height: inherit;
+  object-fit: cover;
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+}
+
+.mv__title-wrapper {
+  position: absolute;
+  top: 63.7669%;
+  right: rem(12);
+  transform: translateY(-50%);
+  width: rem(191);
+  height: rem(155);
+  background-image: url(../images/common/mv-accent.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include mq("md") {
+    top: 50%;
+    right: max(calc(50% - min(47.03125vw,rem(602))));
+    width: rem(459);
+    height: rem(372);
+  }
+}
+
+.mv__title {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: rem(40);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @include mq("md") {
+		font-size: rem(96);
+    left: 47.3%;
+  }
+}

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(48);
+
+  @include mq("md") {
+		gap: rem(78);
+  }
+}

@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.number-card {
+  padding-top: rem(34);
+  padding-bottom: rem(38);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-gray;
+  border-radius: rem(30);
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  transition: all .3s;
+
+  @include mq("md") {
+		padding-top: rem(40);
+    padding-bottom: rem(60);
+  }
+}
+
+.number-card:hover {
+  opacity: .7;
+  box-shadow: none;
+}
+
+.number-card__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(56);
+  height: rem(56);
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  background-color: $bg-blue;
+  border-radius: rem(20);
+
+  @include mq("md") {
+		width: rem(72);
+    height: rem(72);
+    font-size: rem(40);
+  }
+}
+
+.number-card__course {
+  margin-top: rem(24);
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+
+  @include mq("md") {
+		margin-top: rem(32);
+    font-size: rem(24);
+  }
+}

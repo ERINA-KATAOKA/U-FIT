@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.voice__heading {
+  text-align: center;
+}
+
+.voice__slider {
+  margin: rem(32) calc(50% - 50vw) 0;
+
+  @include mq("md") {
+		margin-top: rem(72);
+  }
+}
+
+.voice__cards {
+  display: grid;
+  grid-auto-flow: column;
+}

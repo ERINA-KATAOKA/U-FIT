@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.plan__inner.inner {
+  max-width: rem(352);
+  
+  @include mq("md") {
+    max-width: rem(633);
+  }
+}
+
+.plan__button-wrap {
+  position: relative;
+  padding-top: rem(48);
+
+  @include mq("md") {
+		padding-top: rem(119);
+  }
+}
+
+.plan__button-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(136);
+  height: rem(32);
+  background-image: url(../images/common/plan-accent.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include mq("md") {
+    width: rem(264);
+    height: rem(64);
+  }
+}
+
+.plan__button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-top: rem(14);
+  padding-bottom: rem(16);
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  text-align: center;
+  background-color: $white02;
+  border-radius: rem(30);
+  box-shadow: 0 rem(10) rem(10) rgba($color: #669eaa, $alpha: 0.25);
+  cursor: pointer;
+  transition: all .3s;
+
+  @include mq("md") {
+		padding-top: rem(37);
+    padding-bottom: rem(34);
+    font-size: rem(24);
+  }
+}
+
+.plan__button:hover {
+  box-shadow: none;
+  opacity: .7;
+}
+
+.plan__button span {
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: $bg-blue;
+  text-transform: uppercase;
+
+  @include mq("md") {
+    line-height: 1.2;
+		font-size: rem(64);
+  }
+}
+
+.plan__button::before,
+.plan__button::after {
+  content: "";
+  position: absolute;
+  top: rem(37);
+  width: rem(16);
+  height: rem(16);
+  border-radius: 50%;
+  background-color: $bg-blue;
+
+  @include mq("md") {
+    top: rem(77);
+		width: rem(30);
+    height: rem(30);
+  }
+}
+
+.plan__button::before {
+  left: rem(36);
+
+  @include mq("md") {
+		left: rem(86);
+  }
+}
+
+.plan__button::after {
+  right: rem(36);
+
+  @include mq("md") {
+    right: rem(86);
+  }
+}

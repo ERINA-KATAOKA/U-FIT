@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>U FIT</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="./assets/images/common/logo.svg" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header js-header">
+      <div class="header__inner">
+        <a href="index.html" class="header__site-title">
+          <div class="header__logo">
+            <img src="./assets/images/common/logo.svg" alt="U FIT">
+          </div>
+          <p class="header__name">u&nbsp;fit</p>
+        </a>
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#ferture">ferture</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#voice">voice</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#plan">plan</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#faq">faq</a>
+            </li>
+            <li class="header__nav-button">
+              <a href="page-contact.html">無料体験お申込み</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__sp-button">
+          <!-- contact button -->
+          <div class="sp-button">
+            <a href="page-contact.html" class="sp-button__link sp-button__link--contact"></a>
+            <div class="sp-button__text">お問い合わせ</div>
+          </div>
+          <!-- hamburger -->
+          <div class="sp-button">
+            <button type="button" class="sp-button__link sp-button__link--drawer js-hamburger"></button>
+            <div class="sp-button__text">メニュー</div>
+          </div>
+        </div>
+
+        <!-- drawer -->
+        <div class="drawer js-drawer">
+          <div class="drawer__inner">
+            <button type="button" class="drawer__button"></button>
+            <ul class="drawer__items">
+              <li class="drawer__item">
+                <a class="drawer__link" href="#ferture">ferture</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#voice">voice</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#plan">plan</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#faq">faq</a>
+              </li>
+            </ul>
+            <div class="drawer__nav-button">
+              <a href="page-contact.html">無料体験お申込みはこちら</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- page-mv -->
+    <div class="page-mv">
+      <div class="page-mv__inner">
+        <picture class="page-mv__img">
+          <source srcset="./assets/images/common/mv-contact-sp.jpg" media="(max-width: 767px)"/>
+          <img src="./assets/images/common/mv-contact-pc.jpg" alt="ランニングマシーンで走る様子"/>
+        </picture>
+        <div class="page-mv__title-wrapper">
+          <h1 class="page-mv__title">contact</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact-form -->
+    <div id="contact-form" class="contact-form layout-contact-form">
+      <div class="contact-form__inner inner">
+        <div class="contact-form__content">
+          <div class="contact-form__title">
+            <h2>無料体験受付</h2>
+          </div>
+          <div class="contact-form__form">
+            <form class="form" id="form" action="" method="post">
+              <dl class="form__item">
+                <dt>体験日程<span>必須</span></dt>
+                <dd class="">
+                  <select name="体験日程" onchange="Color(this)" size="1">
+                    <option value="" disabled selected>日時を選択してください</option>
+                    <option value="10月2日(月)">10月2日(月)</option>
+                    <option value="10月3日(火)">10月3日(火)</option>
+                    <option value="10月4日(水)">10月4日(水)</option>
+                    <option value="10月5日(木)">10月5日(木)</option>
+                    <option value="10月6日(金)">10月6日(金)</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl class="form__item">
+                <dt>お名前<span>必須</span></dt>
+                <dd>
+                  <input type="text" name="お名前" required>
+                </dd>
+              </dl>
+              <dl class="form__item">
+                <dt>性別</dt>
+                <dd class="">
+                  <label>
+                    <input type="radio" name="性別" value="女性">
+                    <span>女性</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="性別" value="男性">
+                    <span>男性</span>
+                  </label>
+                </dd>
+              </dl>
+              <dl class="form__item">
+                <dt>ご住所<span>必須</span></dt>
+                <dd>
+                  <input type="text" name="ご住所" required>
+                </dd>
+              </dl>
+              <dl class="form__item">
+                <dt>メールアドレス<span>必須</span></dt>
+                <dd>
+                  <input type="email" name="メールアドレス" required>
+                </dd>
+              </dl>
+              <dl class="form__item">
+                <dt>電話番号<span>必須</span></dt>
+                <dd>
+                  <input type="tel" name="電話番号" required>
+                </dd>
+              </dl>
+              <div class="form__button">
+                <input type="submit" value="送信する">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer layout-footer layout-footer--contact">
+      <div class="footer__inner">
+        <div class="footer__contents">
+          <a href="index.html" class="footer__site-title">
+            <div class="footer__logo">
+              <img src="./assets/images/common/logo.svg" alt="U FIT">
+            </div>
+            <p class="footer__name">u&nbsp;fit</p>
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#ferture">ferture</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#voice">voice</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#plan">plan</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#faq">faq</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright&ensp;&copy;&ensp;U&nbsp;FIT&ensp;All&ensp;Rights&ensp;Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

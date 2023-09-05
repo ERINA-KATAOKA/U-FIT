@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.yourself {
+  position: relative;
+  padding-top: rem(48);
+  overflow-x: hidden;
+
+  @include mq("md") {
+		padding-top: rem(42);
+    padding-bottom: rem(64);
+  }
+}
+
+.yourself::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(479);
+  height: rem(318);
+  background-image: url(../images/common/bg-accent.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -20;
+  
+  @include mq("md") {
+    width: rem(651);
+    height: rem(433);
+		left: max(calc(50% - rem(496)));
+		// left: max(calc(50% - min(38.75vw, rem(496))));
+    transform: translateX(0);
+  }
+}
+
+.yourself__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @include mq("md") {
+    flex-direction: row;
+    gap: rem(48);
+  }
+
+}
+
+.yourself__inner.inner {
+  max-width: rem(500);
+
+  @include mq("md") {
+    max-width: rem(898);
+  }
+}
+
+
+.yourself__text-content {
+  @include mq("md") {
+    margin-top: rem(16);
+    padding-left: rem(36);
+		width: 55.66037%;
+  }
+}
+
+.yourself__heading {
+padding-left: rem(36);
+
+@include mq("md") {
+	padding-left: rem(20);
+}
+}
+
+.yourself__text {
+  margin-top: rem(32);
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.08em;
+  text-align: justify;
+  
+  @include mq("md") {
+    margin-top: rem(48);
+    line-height: calc(40 / 16);
+    
+  }
+}
+
+.yourself__text p span {
+  background: linear-gradient(transparent 60%, $white 60%);
+}
+
+.yourself__img {
+  max-width: rem(178);
+  
+  @include mq("md") {
+    max-width: rem(328);
+		width: 38.67924%;
+  }
+}
+

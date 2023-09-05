@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.contact__inner.inner {
+  max-width: rem(500);
+  padding: 0 rem(32);
+
+  @include mq("md") {
+		max-width: rem(770);
+  }
+}
+
+.contact__button {
+  display: inline-block;
+  width: 100%;
+  padding: rem(15);
+  font-size: rem(18);
+  font-weight: $medium;
+  letter-spacing: 0.08em;
+  color: $white;
+  text-align: center;
+  background-color: $black;
+  border-radius: rem(30);
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  transition: all .3s;
+  
+  @include mq("md") {
+    padding: rem(40);
+    font-size: rem(36);
+    font-weight: $regular;
+    line-height: calc(40 / 36);
+		
+  }
+}
+
+.contact__button:hover {
+  box-shadow: none;
+  opacity: .7;
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>U FIT</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="./assets/images/common/logo.svg" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header js-header">
+      <div class="header__inner">
+        <a href="index.html" class="header__site-title">
+          <div class="header__logo">
+            <img src="./assets/images/common/logo.svg" alt="U FIT">
+          </div>
+          <h1 class="header__name">u&nbsp;fit</h1>
+        </a>
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#ferture">ferture</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#voice">voice</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#plan">plan</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#faq">faq</a>
+            </li>
+            <li class="header__nav-button">
+              <a href="page-contact.html">無料体験お申込み</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__sp-button">
+          <!-- contact button -->
+          <div class="sp-button">
+            <a href="page-contact.html" class="sp-button__link sp-button__link--contact"></a>
+            <div class="sp-button__text">お問い合わせ</div>
+          </div>
+          <!-- hamburger -->
+          <div class="sp-button">
+            <button type="button" class="sp-button__link sp-button__link--drawer js-hamburger"></button>
+            <div class="sp-button__text">メニュー</div>
+          </div>
+        </div>
+
+        <!-- drawer -->
+        <div class="drawer js-drawer">
+          <div class="drawer__inner">
+            <button type="button" class="drawer__button"></button>
+            <ul class="drawer__items">
+              <li class="drawer__item">
+                <a class="drawer__link" href="#ferture">ferture</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#voice">voice</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#plan">plan</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#faq">faq</a>
+              </li>
+            </ul>
+            <div class="drawer__nav-button">
+              <a href="page-contact.html">無料体験お申込みはこちら</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- mv -->
+    <div class="mv">
+      <div class="mv__inner">
+        <picture class="mv__img">
+          <source srcset="./assets/images/common/mv-sp.jpg" media="(max-width: 767px)"/>
+          <img src="./assets/images/common/mv-pc.jpg" alt="トレーニングジムでメジャーでウエストを測定している様子"/>
+        </picture>
+        <div class="mv__title-wrapper">
+          <h2 class="mv__title">u&nbsp;fit</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- yourself -->
+    <section id="yourself" class="yourself layout-yourself">
+      <div class="yourself__inner inner">
+        <div class="yourself__text-content">
+          <div class="yourself__heading section-heading section-heading--accent">
+            <h3 class="section-heading__title">be&nbsp;yourself</h3>
+          </div>
+          <div class="yourself__text">
+            <p>U&nbsp;FITは、<span>自分の好きな自分になれる場所</span><br>一時的なボディメイクのサポートではなく、お客様1人1人に寄り添い、長期間における身体のあり方を「共に」作り上げていきます。</p>
+          </div>
+        </div>
+        <div class="yourself__img">
+          <img src="./assets/images/common/yourself-img.png" alt="女性がダンベルで運動している様子">
+        </div>
+      </div>
+    </section>
+
+    <!-- ferture -->
+    <section id="ferture" class="ferture layout-feature">
+      <div class="ferture__inner inner">
+        <div class="feature__heading section-heading">
+          <h3 class="section-heading__title">feature</h3>
+        </div>
+        <ul class="feature__cards feature-cards">
+          <li class="feature-cards__item feature-card">
+            <div class="feature-card__number">
+              <p>01</p>
+            </div>
+            <div class="feature-card__body">
+              <div class="feature-card__text-content">
+                <h4 class="feature-card__title">種類豊富なマシーン完備</h4>
+                <p class="feature-card__text">幅広い種類のトレーニングマシーンで、最適なトレーニングを提供します。<br>ウエイトトレーニングHITトレーニングができる環境が整っています。</p>
+              </div>
+              <div class="feature-card__img">
+                <img src="./assets/images/common/feature01.jpg" alt="トレーニングジムに並ぶランニングマシーンの様子">
+              </div>
+            </div>
+          </li>
+          <li class="feature-cards__item feature-card">
+            <div class="feature-card__number">
+              <p>02</p>
+            </div>
+            <div class="feature-card__body">
+              <div class="feature-card__text-content">
+                <h4 class="feature-card__title">あなたに寄り添うトレーナー</h4>
+                <p class="feature-card__text">当ジムのトレーナーは、あなたに寄り添いながら、個別の目標に合わせたカスタムトレーニングを提供します。<br>わたしたちと一緒に最高の体作りを目指しましょう。</p>
+              </div>
+              <div class="feature-card__img">
+                <img src="./assets/images/common/feature02.jpg" alt="トレーニングジムに並ぶランニングマシーンの様子">
+              </div>
+            </div>
+          </li>
+          <li class="feature-cards__item feature-card">
+            <div class="feature-card__number">
+              <p>03</p>
+            </div>
+            <div class="feature-card__body">
+              <div class="feature-card__text-content">
+                <h4 class="feature-card__title">通いやすいロケーション</h4>
+                <p class="feature-card__text">駅から徒歩3分の立地で、忙しい日常の中でも、手軽にトレーニングが可能&excl;<br>あなたのフィットネス生活をサポートします。</p>
+              </div>
+              <div class="feature-card__img">
+                <img src="./assets/images/common/feature03.jpg" alt="トレーニングジムに並ぶランニングマシーンの様子">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- parallax -->
+    <div class="parallax"></div>
+    <!-- <div class="parallax">
+      <div class="parallax__img-wrap">
+        <img class="parallax__img" src="./assets/images/common/parallax.jpg" alt="">
+      </div>
+    </div> -->
+
+    <!-- voice -->
+    <section id="voice" class="voice layout-voice">
+      <div class="voice__inner inner">
+        <div class="voice__heading section-heading">
+          <h3 class="section-heading__title">voice</h3>
+        </div>
+        <div class="voice__slider">
+          <div class="voice__swiper swiper">
+            <ul class="swiper-wrapper voice__cards">
+              <!-- 01 -->
+              <li class="swiper-slide voice__card voice-card">
+                <div class="voice-card__content">
+                  <div class="voice-card__title">
+                    <h4>自分に自信を持てるようになりました！</h4>
+                  </div>
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                        <p>68kg&rarr;</p>
+                        <p>46kg</p>
+                        <p>(24歳女性)</p>
+                    </div>
+                    <div class="voice-card__img">
+                      <img src="./assets/images/common/voice01.png" alt="自信に満ち溢れた笑顔の女性の様子">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 02 -->
+              <li class="swiper-slide voice__card voice-card">
+                <div class="voice-card__content">
+                  <div class="voice-card__title">
+                    <h4>気付いたら運動が習慣になっていました</h4>
+                  </div>
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                        <p>81kg&rarr;</p>
+                        <p>60kg</p>
+                        <p>(25歳男性)</p>
+                    </div>
+                    <div class="voice-card__img">
+                      <img src="./assets/images/common/voice02.png" alt="自信に満ち溢れた笑顔の女性の様子">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 03 -->
+              <li class="swiper-slide voice__card voice-card">
+                <div class="voice-card__content">
+                  <div class="voice-card__title">
+                    <h4>心も体も健康になりました！</h4>
+                  </div>
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                        <p>59kg&rarr;</p>
+                        <p>45kg</p>
+                        <p>(23歳女性)</p>
+                    </div>
+                    <div class="voice-card__img">
+                      <img src="./assets/images/common/voice03.png" alt="自信に満ち溢れた笑顔の女性の様子">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 04 -->
+              <li class="swiper-slide voice__card voice-card">
+                <div class="voice-card__content">
+                  <div class="voice-card__title">
+                    <h4>ストレスなく続けることが出来ました！</h4>
+                  </div>
+                  <div class="voice-card__body">
+                    <div class="voice-card__text">
+                        <p>72kg&rarr;</p>
+                        <p>53kg</p>
+                        <p>(27歳女性)</p>
+                    </div>
+                    <div class="voice-card__img">
+                      <img src="./assets/images/common/voice04.png" alt="自信に満ち溢れた笑顔の女性の様子">
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- plan -->
+    <div id="plan" class="plan layout-plan">
+      <div class="plan__inner inner">
+        <div class="plan__button-wrap">
+          <a class="plan__button" href="page-plan.html">プランを見てみる<br><span>plan</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- faq -->
+    <section id="faq" class="faq layout-faq">
+      <div class="faq__inner inner">
+        <div class="faq__heading section-heading">
+          <h3 class="section-heading__title">faq</h3>
+        </div>
+        <div class="faq__accordion">
+          <ul class="accordion">
+            <li class="accordion__item">
+              <h4 class="accordion__title js-accordion">体験の持ち物はなんですか？</h4>
+              <div class="accordion__content">
+                <p>トレーニングシューズ、スポーツウェア、タオルが必要です。</p>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h4 class="accordion__title js-accordion">どのようなトレーニングを行いますか？</h4>
+              <div class="accordion__content">
+                <p>当カウンセリングでは、お客様一人ひとりの目標や理想に合わせて、専属トレーナーが最適なトレーニングプランをご提案いたします。施設には、通常の筋力トレーニングや高強度インターバルトレーニング（HIIT）にも適した設備が整っています。</p>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h4 class="accordion__title js-accordion">営業時間を教えてください</h4>
+              <div class="accordion__content">
+                <p>平日：午前5時〜午後10時&emsp;土日：午前6時〜午後11時</p>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h4 class="accordion__title js-accordion">お支払い方法について教えて下さい。</h4>
+              <div class="accordion__content">
+                <p>現金払い、クレジットカード、電子マネーが利用可能です。</p>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h4 class="accordion__title js-accordion">メンバーの男女比を教えてください</h4>
+              <div class="accordion__content">
+                <p>男性約60％、女性約40％です。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <div id="contact" class="contact layout-contact">
+      <div class="contact__inner inner">
+        <a class="contact__button" href="page-contact.html">無料体験の申し込みはこちら</a>
+      </div>
+    </div>
+
+
+  </main>
+  <footer>
+    <div class="footer layout-footer">
+      <div class="footer__inner">
+        <div class="footer__contents">
+          <a href="index.html" class="footer__site-title">
+            <div class="footer__logo">
+              <img src="./assets/images/common/logo.svg" alt="U FIT">
+            </div>
+            <p class="footer__name">u&nbsp;fit</p>
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#ferture">ferture</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#voice">voice</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#plan">plan</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#faq">faq</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright&ensp;&copy;&ensp;U&nbsp;FIT&ensp;All&ensp;Rights&ensp;Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

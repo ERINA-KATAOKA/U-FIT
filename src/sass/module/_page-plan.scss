@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.page-plan__heading {
+  text-align: center;
+}
+
+.page-plan__inner.inner {
+  max-width: rem(600);
+
+  @include mq("md") {
+    max-width: rem(1082);
+  }
+}
+
+.page-plan__number-cards {
+  margin-top: rem(52);
+  padding: 0 rem(32);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(16) rem(36);
+
+  @include mq("md") {
+    margin-top: rem(104);
+    padding: 0;
+		grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+.page-plan__course-cards {
+  margin-top: rem(75);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(88);
+    padding: rem(38);
+    gap: rem(136);
+  }
+}
+

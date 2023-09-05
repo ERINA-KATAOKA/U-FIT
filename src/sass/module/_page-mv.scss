@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.page-mv {
+  position: relative;
+  width: 100%;
+  height: rem(271);
+
+  @include mq("md") {
+		height: rem(456);
+  }
+}
+
+.page-mv__inner,
+.page-mv__img {
+  width: 100%;
+  height: inherit;
+}
+
+.page-mv__img img {
+  width: 100%;
+  height: inherit;
+  object-position: center;
+  object-fit: cover;
+}
+
+.page-mv__title-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.page-mv__title {
+  font-size: rem(40);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: $white;
+  text-transform: uppercase;
+
+  @include mq("md") {
+		font-size: rem(96);
+  }
+}

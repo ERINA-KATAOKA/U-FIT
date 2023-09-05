@@ -1,0 +1,135 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(72);
+  background-color: $bg-blue;
+  z-index: 1000;
+
+  @include mq("lg") {
+		height: rem(100);
+  }
+}
+
+.header__inner {
+  width: 100%;
+  height: inherit;
+  padding-right: rem(32);
+  padding-left: rem(24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  @include mq("lg") {
+    padding-right: min((140 / 1280)*100vw,rem(140));
+    padding-left: min((140 / 1280)*100vw,rem(140));
+  }
+}
+
+.header__site-title {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  height: inherit;
+  transition: opacity .3s;
+
+  @include mq("lg") {
+		gap: rem(24);
+  }
+}
+
+@media(hover: hover) {
+	.header__site-title:hover {
+    opacity: .7;
+  }
+}
+
+.header__logo {
+  max-width: rem(40);
+
+  @include mq("lg") {
+		max-width: rem(61);
+  }
+}
+
+.header__name {
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @include mq("lg") {
+		font-size: rem(40);
+  }
+}
+
+.header__nav {
+  height: inherit;
+  display: none;
+
+  @include mq("lg") {
+		display: block;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(16);
+  height: inherit;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity .3s;
+}
+
+.header__nav-link:hover {
+  opacity: .7;
+}
+
+.header__nav-button {
+  margin-left: rem(32);
+}
+
+.header__nav-button a {
+  display: inline-block;
+  padding: rem(18) rem(36);
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.08em;
+  background-color: $light-gray;
+  border-radius: rem(24);
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  transition: all .3s;
+}
+
+.header__nav-button a:hover {
+  box-shadow: none;
+  opacity: .7;
+}
+
+.header__sp-button {
+  display: flex;
+  gap: rem(5);
+
+  @include mq("lg") {
+		display: none;
+  }
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>U FIT</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="icon" href="./assets/images/common/logo.svg" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header js-header">
+      <div class="header__inner">
+        <a href="index.html" class="header__site-title">
+          <div class="header__logo">
+            <img src="./assets/images/common/logo.svg" alt="U FIT">
+          </div>
+          <p class="header__name">u&nbsp;fit</p>
+        </a>
+        <div class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#ferture">ferture</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#voice">voice</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#plan">plan</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="index.html#faq">faq</a>
+            </li>
+            <li class="header__nav-button">
+              <a href="page-contact.html">無料体験お申込み</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__sp-button">
+          <!-- contact button -->
+          <div class="sp-button">
+            <a href="page-contact.html" class="sp-button__link sp-button__link--contact"></a>
+            <div class="sp-button__text">お問い合わせ</div>
+          </div>
+          <!-- hamburger -->
+          <div class="sp-button">
+            <button type="button" class="sp-button__link sp-button__link--drawer js-hamburger"></button>
+            <div class="sp-button__text">メニュー</div>
+          </div>
+        </div>
+
+        <!-- drawer -->
+        <div class="drawer js-drawer">
+          <div class="drawer__inner">
+            <button type="button" class="drawer__button"></button>
+            <ul class="drawer__items">
+              <li class="drawer__item">
+                <a class="drawer__link" href="#ferture">ferture</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#voice">voice</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#plan">plan</a>
+              </li>
+              <li class="drawer__item">
+                <a class="drawer__link" href="#faq">faq</a>
+              </li>
+            </ul>
+            <div class="drawer__nav-button">
+              <a href="page-contact.html">無料体験お申込みはこちら</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <!-- page-mv -->
+    <div class="page-mv">
+      <div class="page-mv__inner">
+        <picture class="page-mv__img">
+          <source srcset="./assets/images/common/mv-plan-sp.jpg" media="(max-width: 767px)"/>
+          <img src="./assets/images/common/mv-plan-pc.jpg" alt="ランニングマシーンで走る様子"/>
+        </picture>
+        <div class="page-mv__title-wrapper">
+          <h1 class="page-mv__title">plan</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- page-plan -->
+    <section id="page-plan" class="page-plan layout-page-plan">
+      <div class="page-plan__inner inner">
+        <div class="page-plan__heading section-heading">
+          <h3 class="section-heading__title">選べる３つのプラン</h3>
+        </div>
+        <ul class="page-plan__number-cards">
+          <li class="page-plan__number-card">
+            <a class="number-card" href="#course1">
+              <div class="number-card__number">1</div>
+              <div class="number-card__course">ビギナーコース</div>
+            </a>
+          </li>
+          <li class="page-plan__number-card">
+            <a class="number-card" href="#course2">
+              <div class="number-card__number">2</div>
+              <div class="number-card__course">トレーニングコース</div>
+            </a>
+          </li>
+          <li class="page-plan__number-card">
+            <a class="number-card" href="#course3">
+              <div class="number-card__number">3</div>
+              <div class="number-card__course">ストイックコース</div>
+            </a>
+          </li>
+        </ul>
+        <ul class="page-plan__course-cards">
+          <li id="course1" class="page-plan__course-card">
+            <div class="course-card">
+              <div class="course-card__plan">
+                <div class="course-card__number">1</div>
+                <div class="course-card__course">ビギナーコース</div>
+              </div>
+              <div class="course-card__wrap">
+                <div class="course-card__label">
+                  <div class="course-card__label-item">食事指導</div>
+                  <div class="course-card__label-item">トレーニング</div>
+                </div>
+                <div class="course-card__price">8回<span>8200</span>円</div>
+              </div>
+              <div class="course-card__content">
+                <ul class="course-card__items">
+                  <li class="course-card__item">
+                    <div class="course-card__title">こんな人におすすめ</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">運動の習慣がない方。</li>
+                      <li class="course-card__list-item">疲れやストレスを感じやすい方。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">トレーニング内容</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">専門トレーナーによるカウンセリング後、メニューを組んでいきます。</li>
+                      <li class="course-card__list-item">初心者におすすめの、継続しやすいトレーニングメニューとなっております。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">食事指導</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">無理なく痩せながら栄養素も補える食生活をサポート</li>
+                      <li class="course-card__list-item">おすすめレシピの紹介を行います</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">カウンセリング</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">専属トレーナーが、あなたの生活習慣、食習慣を詳しくヒアリングします。</li>
+                      <li class="course-card__list-item">プログラムは、どんな内容なら続けられそうかを踏まえ制作します。</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li id="course2" class="page-plan__course-card">
+            <div class="course-card">
+              <div class="course-card__plan">
+                <div class="course-card__number">2</div>
+                <div class="course-card__course">トレーニングコース</div>
+              </div>
+              <div class="course-card__wrap">
+                <div class="course-card__label">
+                  <div class="course-card__label-item">トレーニング</div>
+                </div>
+                <div class="course-card__price">8回<span>7500</span>円</div>
+              </div>
+              <div class="course-card__content">
+                <ul class="course-card__items">
+                  <li class="course-card__item">
+                    <div class="course-card__title">こんな人におすすめ</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">とにかく体力をつけたい方。</li>
+                      <li class="course-card__list-item">自分に合う運動方法がわからない。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">トレーニング内容</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">適度に休憩をはさみながらのセッションです。</li>
+                      <li class="course-card__list-item">自宅で１人でもできるストレッチやトレーニングメニューを指導していきます。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">カウンセリング</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">運動が習慣化となるようにメンタル面のフォローをします。</li>
+                      <li class="course-card__list-item">目標を設定して、それにあわせたトレーニングを設定します。</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li id="course3" class="page-plan__course-card">
+            <div class="course-card">
+              <div class="course-card__plan">
+                <div class="course-card__number">3</div>
+                <div class="course-card__course">ストイックコース</div>
+              </div>
+              <div class="course-card__wrap">
+                <div class="course-card__label">
+                  <div class="course-card__label-item">食事指導</div>
+                  <div class="course-card__label-item">トレーニング</div>
+                </div>
+                <div class="course-card__price">8回<span>9000</span>円</div>
+              </div>
+              <div class="course-card__content">
+                <ul class="course-card__items">
+                  <li class="course-card__item">
+                    <div class="course-card__title">こんな人におすすめ</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">努力の継続ができる方。</li>
+                      <li class="course-card__list-item">集中的に取り組むことが好きな方。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">トレーニング内容</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">厳しいトレーニングスケジュールで、体力と筋力の向上を追求します。</li>
+                      <li class="course-card__list-item">重量を使用したトレーニングで、筋肉の成長と体力の向上を図ります。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">食事指導</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">高タンパクで低炭水化物などの食事スタイルに基づき、筋肉の成長と体脂肪の減少をサポートします。</li>
+                      <li class="course-card__list-item">食事の進捗をモニタリングし、効果的な食事戦略を維持します。</li>
+                    </ul>
+                  </li>
+                  <li class="course-card__item">
+                    <div class="course-card__title">カウンセリング</div>
+                    <ul class="course-card__list">
+                      <li class="course-card__list-item">専属トレーナーが定期的に進捗状況を確認し、目標に向けての計画を立てます。</li>
+                      <li class="course-card__list-item">トレーニングの効果を定量的および定性的に評価し、改善の余地があれば修正を加えます。</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- contact -->
+    <div id="contact" class="contact layout-contact layout-contact--plan">
+      <div class="contact__inner inner">
+        <a class="contact__button" href="page-contact.html">無料体験の申し込みはこちら</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer layout-footer layout-footer--plan">
+      <div class="footer__inner">
+        <div class="footer__contents">
+          <a href="index.html" class="footer__site-title">
+            <div class="footer__logo">
+              <img src="./assets/images/common/logo.svg" alt="U FIT">
+            </div>
+            <p class="footer__name">u&nbsp;fit</p>
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#ferture">ferture</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#voice">voice</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#plan">plan</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="index.html#faq">faq</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>Copyright&ensp;&copy;&ensp;U&nbsp;FIT&ensp;All&ensp;Rights&ensp;Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
