@@ -36,7 +36,9 @@ function playAnimation() {
 }
 // オープニングアニメーションに関わる要素を非表示
 function hideAnimation() {
-  gsap.set('.js-loading',{autoAlpha:0})
+  if (loadingAnime) {
+    gsap.set('.js-loading',{autoAlpha:0})
+  }
 }
 // まず最初に読み込まれる所
 document.addEventListener("DOMContentLoaded", function() {
