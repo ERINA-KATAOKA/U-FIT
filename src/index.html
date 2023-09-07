@@ -32,7 +32,44 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
-<body>
+<body class="fade-in">
+  <!-- loading -->
+  <div class="loading js-loading">
+    <div class="loading__animation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#edeff0">
+        <circle cx="12" cy="2" r="0">
+            <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin="0" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(45 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".125s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(90 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".25s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(135 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".375s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(180 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".5s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(225 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".625s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(270 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".75s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(315 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".875s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(180 12 12)" cx="12" cy="2" r="0">
+          <animate attributeName="r" values="0;2;0;0" dur="1s" repeatCount="indefinite" begin=".5s" keySplines=".2 .2 .4 .8;.2 .2 .4 .8;.2 .2 .4 .8" calcMode="spline"/>
+        </circle>
+      </svg>
+      <div class="loading__text">
+        Loading...
+      </div>
+    </div>
+  </div>
   <header>
     <div class="header js-header">
       <div class="header__inner">
@@ -43,7 +80,7 @@
           <h1 class="header__name">u&nbsp;fit</h1>
         </a>
         <div class="header__nav">
-          <ul class="header__nav-list">
+          <ul class="header__nav-list js-list">
             <li class="header__nav-item">
               <a class="header__nav-link" href="#ferture">ferture</a>
             </li>
@@ -100,7 +137,6 @@
         </div>
       </div>
     </div>
-
   </header>
   <main>
     <!-- mv -->
@@ -187,12 +223,12 @@
     </section>
 
     <!-- parallax -->
-    <div class="parallax"></div>
-    <!-- <div class="parallax">
+    <!-- <div class="parallax"></div> -->
+    <div class="parallax js-parallax">
       <div class="parallax__img-wrap">
         <img class="parallax__img" src="./assets/images/common/parallax.jpg" alt="">
       </div>
-    </div> -->
+    </div>
 
     <!-- voice -->
     <section id="voice" class="voice layout-voice">

@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: calc(100vh - rem(72));
-  
+
   @include mq("md") {
     height: calc(100vh - rem(100));
   }
@@ -14,12 +14,16 @@
 .mv__img {
   width: 100%;
   height: inherit;
+  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  overflow: hidden;
 }
 
 .mv__img img{
   height: inherit;
   object-fit: cover;
-  box-shadow: 0 rem(4) rem(4) rgba($color: #000000, $alpha: 0.25);
+  // animation
+  // transform: translate(0, 50%) scale(.5);
+  // filter: grayscale(1);
 }
 
 .mv__title-wrapper {
@@ -33,7 +37,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   @include mq("md") {
     top: 50%;
     right: max(calc(50% - min(47.03125vw,rem(602))));

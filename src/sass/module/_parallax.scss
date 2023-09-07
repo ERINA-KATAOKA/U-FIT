@@ -1,38 +1,38 @@
 @use "global" as *;
 
-.parallax {
-  margin-top: rem(40);
-  width: 100%;
-  height: rem(104);
-  background-image: url(../images/common/parallax.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
-  @include mq("md") {
-    margin-top: rem(152);
-		height: rem(347);
-  }
-}
-
 // .parallax {
 //   margin-top: rem(40);
-//   position: relative;
 //   width: 100%;
 //   height: rem(104);
-//   overflow: hidden;
+//   background-image: url(../images/common/parallax.jpg);
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
 
 //   @include mq("md") {
 //     margin-top: rem(152);
-//     height: rem(347);
+// 		height: rem(347);
 //   }
 // }
 
-// .parallax__img-wrap {
-//   transition: transform .3s;
-// }
+.parallax {
+  margin-top: rem(40);
+  position: relative;
+  width: 100%;
+  height: rem(104);
+  overflow: hidden;
 
-// .parallax__img-wrap:hover {
-//   transform: scale(1.05);
-// }
+  @include mq("md") {
+    margin-top: rem(152);
+    height: rem(347);
+  }
+}
+
+.parallax__img-wrap {
+  transition: transform .3s;
+}
+
+.parallax__img-wrap:hover {
+  transform: scale(1.05);
+}

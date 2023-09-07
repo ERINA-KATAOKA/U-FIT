@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   @include mq("lg") {
     padding-right: min((140 / 1280)*100vw,rem(140));
     padding-left: min((140 / 1280)*100vw,rem(140));

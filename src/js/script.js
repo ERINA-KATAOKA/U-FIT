@@ -1,3 +1,63 @@
+/* --------------------------------------------
+ *  ローディングアニメーション
+ * -------------------------------------------- */
+// クッキー登録
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+// クッキーを取得
+function getCookie(name) {
+  const value = "; " + document.cookie;// 全てのクッキーの文字列を取得し、先頭に"; "を追加
+  const parts = value.split("; " + name + "=");// クッキーの文字列を分割し、指定された名前の前にある部分と後ろにある部分を配列に格納
+  if (parts.length === 2){
+      return parts.pop().split(";").shift();// 名前が見つかった場合、その値を取得し返します
+  }else{
+      return "";// 名前が見つからなかった場合、空の文字列を返します
+  }
+}
+// アニメーション再生
+const loadingAnime = document.querySelector('.js-loading');
+function playAnimation() {
+  if (loadingAnime) { //js-loadingが存在したら
+    const openingTL = gsap.timeline();
+    openingTL
+    .fromTo('.loading__animetion',{autoAlpha:0},{autoAlpha:1,duration:1})
+    .to('.js-loading',{autoAlpha:0,duration:1},'+=1')
+    .fromTo('.mv__img img',{yPercent:100},{yPercent:0,duration:1.5,ease:'power3.out'},'-=.5')
+    .fromTo('.mv__img img',{scale:.5},{scale:1,duration:1.5},'-=.5')
+    .fromTo('.mv__img img',{filter:'grayscale(1)'},{filter:'grayscale(0)',duration:1},'<')
+    .fromTo('.mv__title-wrapper',{clipPath:'inset(50%)'},{clipPath:'inset(0%)',duration:1,ease:'power4.out'})
+    .fromTo('.mv__title-wrapper',{autoAlpha:0},{autoAlpha:1,duration:1.5},'<')
+    .fromTo('.header',{yPercent:-100},{yPercent:0,duration:1,ease:'bounce.out'},'<')
+  }
+}
+// オープニングアニメーションに関わる要素を非表示
+function hideAnimation() {
+  gsap.set('.js-loading',{autoAlpha:0})
+}
+// まず最初に読み込まれる所
+document.addEventListener("DOMContentLoaded", function() {
+  const animationPlayed = getCookie("animationPlayed");
+  if (animationPlayed) {
+    hideAnimation();
+  } else {
+    playAnimation();
+    setCookie("animationPlayed", "true", 1);
+  }
+});
+
+/* --------------------------------------------
+ *  ページ遷移
+ * -------------------------------------------- */
+window.addEventListener('load', function() {
+  const body = document.querySelector('body');
+  body.classList.add('is-active');
+});
+
+
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
@@ -6,20 +66,46 @@ $(function () {
   var height = $(".js-header").height();
   $("main").css("margin-top", height);
 });
-// ページ内スクロール
-$(function () {
+
+$(document).ready(function () {
   // ヘッダーの高さ取得
   const headerHeight = $(".js-header").height();
-  $('a[href^="#"]').click(function () {
-    const speed = 600;
-    let href = $(this).attr("href");
+  // ページ内リンクがクリックされたときの処理
+  $('a[href^="#"]').click(function (e) {
+    const speed = 700;
+    const href = $(this).attr("href");
     let target = $(href == "#" || href == "" ? "html" : href);
     // ヘッダーの高さ分下げる
-    let position = target.offset().top - headerHeight;
+    const position = target.offset().top - headerHeight;
+    // ページ内スクロールアニメーション
     $("body,html").animate({ scrollTop: position }, speed, "swing");
-    return false;
+    // ページ遷移をキャンセル
+    e.preventDefault();
+    // URLにアンカーを追加（ブラウザの履歴に記録される）
+    history.pushState(null, null, href);
   });
+  // ページ読み込み時にURLのアンカーがある場合の処理
+  const hash = window.location.hash;
+  if (hash && $(hash).length) {
+    const position = $(hash).offset().top - headerHeight;
+    $("body,html").animate({ scrollTop: position }, 700, "swing");
+  }
 });
+
+// // ページ内スクロール
+// $(function () {
+//   // ヘッダーの高さ取得
+//   const headerHeight = $(".js-header").height();
+//   $('a[href^="#"]').click(function () {
+//     const speed = 700;
+//     let href = $(this).attr("href");
+//     let target = $(href == "#" || href == "" ? "html" : href);
+//     // ヘッダーの高さ分下げる
+//     let position = target.offset().top - headerHeight;
+//     $("body,html").animate({ scrollTop: position }, speed, "swing");
+//     return false;
+//   });
+// });
 
 // ハンバーガーメニュー
 $(".js-hamburger").click(function () {//ボタンがクリックされたら
@@ -83,16 +169,23 @@ function Color(change){
   }
 }
 
-// document.addEventListener('DOMContentLoaded',function(){
-//   gsap.fromTo('.parallax__img',{y:0},{y:-200,scrollTrigger:{
-//     trigger:'.parallax',
-//     start:'top bottom',
-//     end:'bottom 100px',
-//     endTrigger:'.parallax',
-//     scrub:.5,
-//     markers:{
-//       startColor:'white',
-//       endColor:'black',
-//     }
-//   }});
-// });
+// パララックス
+document.addEventListener('DOMContentLoaded', function() {
+  const headerElement = document.querySelector('.js-header'); // ヘッダー要素を選択
+  const headerHeight = headerElement.offsetHeight;
+  const parallaxElement = document.querySelector('.js-parallax'); // .js-parallax要素を選択
+
+  if (parallaxElement) {
+    // .js-parallax要素が存在する場合にのみ実行
+    gsap.to('.parallax__img', {
+      yPercent: -50,
+      scrollTrigger: {
+        trigger: '.js-parallax',
+        start: 'top bottom',
+        end: 'bottom headerHeight', // headerHeightの値を使うために変数を展開
+        endTrigger: '.js-parallax',
+        scrub: 0.5,
+      },
+    });
+  }
+});
