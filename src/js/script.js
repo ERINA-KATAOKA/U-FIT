@@ -36,8 +36,14 @@ function playAnimation() {
     .fromTo('.mv__title-wrapper',{clipPath:'inset(50%)'},{clipPath:'inset(0%)',duration:1,ease:'power4.out'})
     .fromTo('.mv__title-wrapper',{autoAlpha:0},{autoAlpha:1,duration:1.5},'<')
     .fromTo('.header',{yPercent:-100},{yPercent:0,duration:1,ease:'bounce.out'},'<')
-    .call(enableScroll); // アニメーション終了時にスクロールを有効にする
+    .call(animationComplete); // アニメーション終了時にスクロールを有効にする
   }
+}
+function animationComplete() {
+  // オープニングアニメーションに関わる要素を非表示
+  hideAnimation();
+  // スクロールを有効にする
+  enableScroll();
 }
 function enableScroll() {
   // スクロールを有効にする
